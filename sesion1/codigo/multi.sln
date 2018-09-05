@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multi.tests", "tests\multi.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "multi.utils", "multi.utils", "{89BDC3E6-A07C-4950-AF6E-3DAF3447A428}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multi.utils", "src\multi.utils\multi.utils.csproj\multi.utils.csproj", "{5BF5B6C4-F1C2-4852-B277-DB7E10F08196}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multi.utils", "src\multi.utils\multi.utils.csproj", "{5BF5B6C4-F1C2-4852-B277-DB7E10F08196}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
