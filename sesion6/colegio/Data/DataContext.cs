@@ -21,5 +21,7 @@ namespace colegio.Data
     public DbSet<Curso> Cursos { get; set; }
     public DbSet<Profesor> Profesores { get; set; }
 
+    public DbSet<Aula> Aulas { get; set; }
+
   }
 }

@@ -30,6 +30,7 @@ namespace colegio
     {
       services.AddScoped<IBaseRepository<Profesor, int>, ProfesorRepository>();
       services.AddScoped<IBaseRepository<Curso, int>, CursoRepository>();
+      services.AddScoped<IBaseRepository<Aula, int>, AulaRepository>();
       services.AddScoped<IAlumnoRepository, AlumnoRepository>();
 
       services.Configure<CookiePolicyOptions>(options =>
@@ -46,7 +47,7 @@ namespace colegio
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new Info { Title = "Colegio API", Version = "v1" });
-        c.IncludeXmlComments(@"c:\projects\colegio\colegio\colegio.xml", true);
+        //c.IncludeXmlComments(@"c:\projects\colegio\colegio\colegio.xml", true);
       });
     }
 
