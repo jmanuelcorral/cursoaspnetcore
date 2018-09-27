@@ -13,6 +13,10 @@ namespace colegio.Data.Mappings
 
     public static void Build(ModelBuilder modelBuilder)
     {
+
+      modelBuilder
+        .Query<AlumnoCursoAula>().ToView("vAlumoCursoAula");
+
       modelBuilder.Entity<Alumno>(entity =>
       {
         entity.ToTable("Alumnos");

@@ -9,6 +9,7 @@
 
   public class AlumnoRepository : BaseRepository<Alumno, int>, IAlumnoRepository
   {
+    private readonly DataContext _concreteContext;
     public List<Alumno> GetAlumnosByCurso(int Curso)
     {
       return _query.Where(x => x.CursoId == Curso).ToList();
@@ -19,8 +20,14 @@
       return _query.Include("Curso").ToListAsync();
     }
 
+    public Task<List<AlumnoCursoAula>> GetAlumnoCursoAula()
+    {
+      return _concreteContext.VAlumnoCursoAula.ToListAsync();
+    }
+
     public AlumnoRepository(DataContext context) : base(context)
     {
+      _concreteContext = context;
     }
   }
 }

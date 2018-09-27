@@ -17,6 +17,8 @@
 
     public DbSet<Aula> Aulas { get; set; }
 
+    public DbQuery<AlumnoCursoAula> VAlumnoCursoAula { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       ColegioMappings.Build(modelBuilder);

@@ -27,5 +27,14 @@
       return NotFound(new ErrorResponse {Message = "No hay Alumnos"});
     }
     
+    [HttpGet]
+    [Route("resumen")]
+    public async Task<ActionResult<IEnumerable<AlumnoCursoAula>>> GetResumen()
+    {
+      var resultado = await _concreteRepo.GetAlumnoCursoAula();
+      if (resultado.Count > 0)
+        return Ok(resultado);
+      return NotFound(new ErrorResponse {Message = "No hay Alumnos"});
+    }
   }
 }

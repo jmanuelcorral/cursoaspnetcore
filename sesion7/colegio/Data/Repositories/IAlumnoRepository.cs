@@ -8,5 +8,6 @@
   {
     List<Alumno> GetAlumnosByCurso(int Curso);
     Task<List<Alumno>> GetFullAlumnosCurso();
+    Task<List<AlumnoCursoAula>> GetAlumnoCursoAula();
   }
 }
