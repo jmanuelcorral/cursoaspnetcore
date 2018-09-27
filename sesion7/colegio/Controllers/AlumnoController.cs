@@ -3,6 +3,8 @@
   using Data.Repositories;
   using Microsoft.AspNetCore.Mvc;
   using Models;
+  using System.Collections.Generic;
+  using System.Threading.Tasks;
 
   [Route("api/[controller]")]
   [ApiController]
@@ -15,5 +17,15 @@
       _concreteRepo = dependency;
     }
 
+    [HttpGet]
+    [Route("withcurso")]
+    public async Task<ActionResult<IEnumerable<Alumno>>> GetFull()
+    {
+      var resultado = await _concreteRepo.GetFullAlumnosCurso();
+      if (resultado.Count > 0)
+        return Ok(resultado);
+      return NotFound(new ErrorResponse {Message = "No hay Alumnos"});
+    }
+    
   }
 }
